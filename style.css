@@ -1,0 +1,1600 @@
+:root {
+  --primaryColor: rgb(242, 140, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* TODO: Nav Bar */
+
+nav {
+  width: 100%;
+  background-color: #fff9f4;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+#logo {
+  line-height: 1.7rem;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+#logo h1 {
+  font-size: 250%;
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+#logo span {
+  color: black;
+}
+
+#logo h4 {
+  padding-left: 30px;
+  font-size: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#items ul {
+  display: flex;
+  color: white;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#items ul li {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: gray;
+}
+
+#items > ul > li > i {
+  color: var(--primaryColor);
+  padding-top: 3px;
+  font-weight: 800;
+}
+
+#items ul li span {
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+}
+
+#button {
+  display: flex;
+  width: 25%;
+  gap: 50px;
+}
+
+#appointment {
+  background: var(--primaryColor);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  gap: 10px;
+}
+
+#appointment img {
+  height: 80%;
+}
+
+#help {
+  background: transparent;
+  border: 2px solid var(--primaryColor);
+}
+
+#treatmentOptions {
+  border-radius: 30px;
+  height: 400px;
+  width: 70%;
+  background: #fff9f4;
+  position: absolute;
+  left: 20%;
+  top: 110%;
+  overflow: hidden;
+  display: none;
+  z-index: 100;
+}
+
+#optiongrid {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0px 20px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+}
+.arrow::after {
+  content: "\27F6";
+  margin-left: 10px;
+  color: var(--primaryColor);
+}
+
+#optiontext {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#optiontext i {
+  color: var(--primaryColor);
+  font-weight: 800;
+}
+
+#helplist {
+  height: 300px;
+  width: 15%;
+  background: #fff9f4;
+  position: absolute;
+  right: 8%;
+  top: 110%;
+  gap: 10px;
+  display: none;
+  z-index: 100;
+}
+
+.animate {
+  animation: 2s helplistanimation ease-out;
+}
+
+@keyframes helplistanimation {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#contact {
+  height: 80px;
+  padding: 0px 20px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contactDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+}
+
+#contactIcon i {
+  font-size: 400%;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* TODO: First Slider */
+
+#first_section {
+  margin-top: 2px;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+#sliderImage {
+  height: 100%;
+  background: #d0deaa;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px;
+  position: relative;
+}
+
+.leftslider {
+  width: 100%;
+}
+
+#sliderText {
+  position: absolute;
+  margin-left: 50px;
+  line-height: 4rem;
+}
+
+#sliderText h1 {
+  font-size: 400%;
+}
+
+#sliderimage {
+  position: absolute;
+  width: 100%;
+  right: 0;
+}
+
+#sliderimage img {
+  width: 100%;
+  height: 500px;
+}
+
+.lessOpacity {
+  font-size: 200%;
+  opacity: 60%;
+  font-weight: 600;
+}
+.hightlight {
+  font-size: 200%;
+}
+
+.anotherImage {
+  background: yellow;
+}
+
+/* TODO: Treatments option  */
+
+#forth_section {
+  height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#forthcontainer {
+  background: #fff9f4;
+  height: 650px;
+  width: 80%;
+  border-radius: 50px;
+}
+
+#heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#treatment {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#top {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 200px;
+  width: 90%;
+  gap: 25px;
+}
+
+#treat {
+  background: white;
+  width: 100%;
+  border-radius: 10px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#treat img {
+  height: 50%;
+}
+
+#treat h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#moreExplore {
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+/* TODO: Form Sectoion */
+
+.fifth_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 40% 57.1%;
+  gap: 36px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+  top: 200px;
+  /* left: 20px; */
+}
+
+.button::before {
+  content: "";
+  width: 77px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  top: 27px;
+}
+
+.button i {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.btn-locateClinic {
+  font-size: 80%;
+  text-decoration: underline;
+  position: relative;
+  top: 70%;
+}
+
+.btn-default {
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+  top: 70%;
+}
+
+.btn-default::before {
+  content: "";
+  width: 48%;
+  height: 1px;
+  background: black;
+  position: absolute;
+  top: 27px;
+}
+
+.btn-default i {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.box1 {
+  background: #fff9f4;
+  height: 786px;
+  padding: 0px 80px 24px 80px;
+  border-radius: 24px;
+}
+
+.info {
+  /* background: yellow; */
+  width: 350px;
+  height: 141px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.info h1 {
+  /* font-fami; */
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  color: #303030;
+  margin-bottom: 10px;
+}
+
+.info p {
+  color: #474747;
+  /* font-family: Open Sans; */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 31.2px;
+  text-align: left;
+}
+
+.form {
+  /* background: yellow; */
+  width: 351px;
+  height: 400px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form input {
+  width: 100%;
+  outline: none;
+  border: 1.62px solid #b0b0b0;
+  padding: 12px 20px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.name::placeholder {
+  font-weight: 700;
+  line-height: 38.13px;
+  color: #5e5e5e;
+  text-align: left;
+  position: relative;
+  top: -2px;
+  left: -3px;
+}
+
+.form button {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.8rem;
+  padding: 10px 0;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #de6f0d;
+  width: 100%;
+  color: #ffffff;
+  line-height: 26.18px;
+  cursor: pointer;
+  background: #f8943f;
+}
+
+.box2 {
+  height: 786px;
+  display: grid;
+  grid-template-rows: 2fr 1.5fr;
+  gap: 24px;
+}
+
+.box3 {
+  background: #fbf5ff;
+  border-radius: 24px;
+  display: flex;
+  padding: 10px 10px 20px 30px;
+}
+
+.box3 img {
+  position: relative;
+  top: 25px;
+}
+
+.box4 {
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  gap: 34px;
+}
+
+.box4 p {
+  text-align: center;
+}
+
+.box5 {
+  background: #f5f8ff;
+  border-radius: 20px;
+}
+
+.box6 {
+  background: #e1f2ee;
+  border-radius: 20px;
+  line-height: 1rem;
+}
+
+/* TODO: Happy Client */
+
+#happyclient {
+  margin-top: 40px;
+}
+
+#happyclient h2 {
+  text-align: center;
+}
+
+#clients {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  gap: 20px;
+  scroll-snap-type: x;
+  cursor: pointer;
+}
+
+#clients img {
+  border-radius: 20px;
+  height: 350px;
+}
+
+#happyclient video {
+  height: 200px;
+}
+
+/* TODO:  Doctor Profiles*/
+
+#doctorsProfile {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+#left {
+  height: 550px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+#left h1 {
+  font-size: 150%;
+  padding-left: 3rem;
+}
+#achive {
+  display: flex;
+  gap: 50px;
+  width: 70%;
+}
+
+#achiveIcon img {
+  height: 6rem;
+}
+
+#achivetext {
+  line-height: 3rem;
+  width: 400px;
+}
+
+#achivetext h3 {
+  color: rgb(119, 61, 40);
+  font-size: 100%;
+  white-space: nowrap;
+}
+
+#achivetext p {
+  font-size: 20px;
+}
+
+#achivetext span {
+  color: var(--primaryColor);
+}
+
+#orthoScroller {
+  margin-top: 10px;
+  padding-left: 20px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#oscroll p {
+  line-height: 2rem;
+  animation: 7s ortho infinite linear;
+}
+
+@keyframes ortho {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-500%);
+  }
+}
+
+#right {
+  height: 550px;
+  width: 55%;
+}
+
+#doctorscroller {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow: auto;
+  scroll-snap-type: x;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+#profile {
+  padding: 0px 30px;
+}
+
+#profile img {
+  border-radius: 20px;
+  height: 300px;
+}
+
+.slider {
+  scroll-snap-align: start;
+}
+
+#doctorname {
+  padding: 10px;
+}
+
+#doctorname h4 {
+  color: rgb(119, 61, 40);
+  font-size: 130%;
+}
+
+#doctorname p {
+  font-size: 90%;
+  font-weight: 500;
+}
+
+#meetBtn {
+  margin: 30px 100px;
+}
+
+#meetBtn p {
+  text-align: center;
+  color: white;
+  padding: 8px 0px;
+  font-size: 100%;
+}
+
+/* TODO: Services */
+
+#services {
+  height: 50px;
+  width: 100%;
+  background-color: #ffebeb;
+  overflow: hidden;
+  padding: 10px 0px;
+}
+
+#firstrow {
+  white-space: nowrap;
+  padding-left: 10px;
+  animation: 7s clientslider infinite linear;
+}
+#clientIcon {
+  display: inline-block;
+  gap: 20px;
+}
+
+@keyframes clientslider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#onemorediv {
+  display: flex;
+}
+
+#clientItem {
+  margin-left: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+#clientItem img {
+  height: 30px;
+}
+
+#clientItem p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#clientItem span {
+  color: var(--primaryColor);
+}
+
+/* TODO: Carousel */
+
+#carousel {
+  height: 600px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  height: 500px;
+  width: auto;
+  display: flex;
+  gap: 50px;
+}
+
+#images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+#images img {
+  height: 95%;
+  border-radius: 20px;
+}
+
+#images .active {
+  display: block;
+}
+
+#imageText {
+  height: 50%;
+  width: auto;
+  position: absolute;
+  border-radius: 20px;
+  left: 5%;
+  background-color: rgb(61, 32, 25);
+  color: white;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#imagetitle p {
+  font-size: 20px;
+}
+
+#imagetitle h2 {
+  font-size: 46px;
+  line-height: 3rem;
+}
+
+#imgdesc {
+  width: 320px;
+}
+
+#imgdetail {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+#movebtn {
+  height: 40px;
+  width: 100%;
+  padding-left: 50px;
+  position: absolute;
+  bottom: 5%;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  background-color: rgb(243, 213, 183);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+#prevBtn {
+  position: absolute;
+  left: 80%;
+}
+
+#nextBtn {
+  position: absolute;
+  left: 87%;
+}
+
+/* TODO:  Journey Thorugh Knowledge */
+
+#knowledgejourney {
+  overflow: hidden;
+  height: 550px;
+  position: relative;
+  background-color: #ffebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#knowledgejourney h1 {
+  margin-top: 20px;
+}
+
+#bloglist {
+  margin: 10px 0px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+#bloglist li {
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.active {
+  color: var(--primaryColor);
+}
+.detail {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 100%;
+  padding: 10px;
+  z-index: 1;
+}
+
+.detail.active {
+  display: block;
+  color: black;
+  z-index: 2;
+}
+
+#generalblogcontent {
+  margin-top: 10px;
+  width: 90%;
+  height: auto;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#generalblogitem {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+#generalblogimg img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 15px;
+}
+
+#generalblogdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+#generalblogdetails h4 {
+  font-size: 90%;
+}
+
+#generalblogdetails p {
+  font-size: 70%;
+}
+
+#explore {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 80%;
+}
+
+#explore p {
+  font-size: 20px;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+
+/* TODO:Company */
+#company {
+  height: 1050px;
+  position: relative;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+#handshake {
+  width: 80%;
+  height: 650px;
+  border-radius: 50px;
+  background-image: url("https://s3-alpha-sig.figma.com/img/2954/6d1f/a899a674c0fc0f91faa88acd6b0a0fde?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WuPA6~hu~rko17b6IchaSaPFe4xENmEUXbD3B-okxpBqqJ665rEo7ST3ANft4WNDwyelsORWagQVx7cvlVHzJZIUzd5eEiSntBfqhC6vpZlHOBrRpCNxdd~v2eyvQzKf4zRI63m6G7ohmodHB2cQszLSPdoLL8gKmDZm1DnrgDpaQUNytdWza2HPGJr8yF1vW-eDM7b-fcyUAMNp25yY5v2NlsdqHIdsnJTIh~XQ~zpEkOY5ZatuoM-NJ5OVFH2EuG5WDrZ1X~SNRHspkCk84Wu5D1CinYWQ9YQGkRbn~BnhvR2~AxRCyAuNrtI1LGtFaPgN2Zo~GRiZdMK5SB5WNg__");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+}
+
+#companyDetails {
+  height: 460px;
+  width: 70%;
+  border: 2px solid black;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#details {
+  line-height: 3rem;
+  padding: 15px 35px;
+}
+
+#details h1 {
+  color: var(--primaryColor);
+  font-size: 48px;
+}
+#details h2 {
+  font-size: 34px;
+}
+#details h1 {
+  color: var(--primaryColor);
+  font-size: 48px;
+}
+
+#brandlogo {
+  white-space: nowrap;
+}
+
+#companylogo {
+  height: 150px;
+  padding: 50px 0px;
+  display: inline-block;
+  animation: 7s logoslides infinite linear;
+}
+
+#companylogo img {
+  height: 50px;
+  margin: 0px 30px;
+}
+
+@keyframes logoslides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#twobutton {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.primBtn {
+  background-color: var(--primaryColor);
+  height: 3rem;
+  width: 50%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+}
+
+#register {
+  font-size: 20px;
+  color: rgb(73, 30, 15);
+  font-weight: 700;
+}
+
+/* TODO:Beyond Dentistry */
+
+#beyondDentistry {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+#innerDentistry {
+  background-color: #ffebeb;
+  height: 500px;
+  width: 1450px;
+  border-radius: 20px;
+  padding: 20px;
+  color: rgb(73, 30, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#title {
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+#title h3 {
+  font-size: 34px;
+}
+#title p {
+  font-size: 20px;
+}
+
+#bach {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+#eachBach {
+  background-color: white;
+  height: 180px;
+  width: 180px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#eachBach img {
+  height: 50%;
+}
+
+/* TODO:Frequently asked questions */
+
+#faq {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#faq h3 {
+  font-size: 28px;
+}
+
+#questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  width: 80%;
+  padding: 20px 40px;
+}
+
+#question {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#questions hr {
+  width: 90%;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+#smallsize {
+  display: none;
+}
+
+#answer {
+  display: none;
+  font-size: 16px;
+  margin-top: 10px;
+  padding-left: 30px;
+  width: 650px;
+}
+
+#toggle-icon {
+  width: 30px;
+  color: var(--primaryColor);
+}
+
+/* TODO:Footer */
+
+footer {
+  background-color: rgb(73, 30, 15);
+  color: white;
+  overflow: hidden;
+}
+
+#links {
+  padding-top: 10px;
+  width: 100vw;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#box {
+  opacity: 75%;
+}
+
+#box h3 {
+  font-size: 150%;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.socialMedia {
+  margin-bottom: 12px;
+  font-size: 150%;
+  font-weight: 400;
+}
+
+#box li {
+  list-style: none;
+  padding: 5px;
+  font-size: 80%;
+  font-weight: 400;
+}
+
+#socialMedia {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 130%;
+}
+
+#footerLogo {
+  text-align: center;
+  font-size: 550%;
+  opacity: 25%;
+  line-height: 7.5rem;
+}
+
+#footerLogo h1 {
+  color: var(--primaryColor);
+}
+#footerLogo span {
+  color: black;
+}
+
+#footerLogo h4 {
+  font-size: 90%;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#footerline {
+  opacity: 50%;
+  text-align: center;
+  font-size: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* TODO: Tablet screen size */
+@media only screen and (max-width: 900px) {
+  /*  Doctor Profiles*/
+
+  #doctorsProfile {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #left {
+    height: 550px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  #left h1 {
+    font-size: 110%;
+  }
+  #achive {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+  }
+
+  #achiveIcon img {
+    height: 6rem;
+  }
+  #achivetext {
+    line-height: 3rem;
+    width: 100%;
+  }
+
+  #achivetext h3 {
+    font-size: 100%;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  #achivetext p {
+    font-size: 120%;
+  }
+  #orthoScroller {
+    margin-top: 10px;
+    padding-left: 0px;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #oscroll p {
+    width: 100%;
+    line-height: 2rem;
+    font-size: 90%;
+    animation: 7s ortho infinite linear;
+  }
+
+  #meetBtn {
+    margin: 30px 40px;
+  }
+
+  #right {
+    width: 60%;
+  }
+
+  /* carousel*/
+
+  #images {
+    left: -13%;
+  }
+
+  /* Journey Thorugh Knowledge  */
+  #knowledgejourney {
+    height: 700px;
+  }
+  #bloglist li {
+    font-size: 110%;
+  }
+
+  #bloglist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .detail {
+    top: 28%;
+  }
+  #generalblogcontent {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* company */
+  #companyDetails {
+    height: 500px;
+  }
+
+  /* Beyond Dentistry */
+  #innerDentistry {
+    height: 580px;
+  }
+  #bach {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 5rem;
+  }
+  /* FAQ */
+  #questions {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 35px;
+    width: 85%;
+    padding: 20px 40px;
+  }
+
+  #smallsize {
+    display: block;
+  }
+  /* Footer */
+
+  #links {
+    padding-top: 10px;
+    padding-left: 50px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
+  }
+}
+
+/* TODO: Mobile screen size */
+@media (max-width: 720px) {
+  /* Doctor Profile */
+  #doctorsProfile {
+    height: 1080px;
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  #right {
+    border: 2px solid green;
+    width: 100%;
+  }
+  #profile {
+    padding: 0px 15px;
+  }
+  #profile img {
+    border-radius: 20px;
+    height: 250px;
+    user-select: none;
+  }
+  #doctorname h4 {
+    color: rgb(119, 61, 40);
+    font-size: 18px;
+  }
+
+  #doctorname p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* Happy Client */
+  #firstrow {
+    white-space: nowrap;
+    padding-left: 10px;
+    animation: 5s clientslider infinite linear;
+  }
+  /* Carousel */
+
+  #carousel {
+    height: 550px;
+    width: 100%;
+  }
+
+  .carousel-track {
+    height: 480px;
+    width: auto;
+    display: flex;
+    gap: 10px;
+  }
+  #images {
+    left: -10%;
+  }
+
+  #images img {
+    height: 400px;
+  }
+
+  #imageText {
+    width: 320px;
+    padding: 15px 30px;
+  }
+  #imagetitle p {
+    font-size: 16px;
+  }
+
+  #imagetitle h2 {
+    font-size: 32px;
+    line-height: 3rem;
+  }
+
+  #imgdesc {
+    width: 220px;
+  }
+
+  #imgdetail {
+    margin-top: 8px;
+    font-weight: 600;
+    color: var(--primaryColor);
+  }
+  #prevBtn {
+    left: 70%;
+  }
+
+  #nextBtn {
+    left: 80%;
+  }
+
+  /* Journey Thorugh Knowledge */
+  #knowledgejourney {
+    height: 1150px;
+    position: relative;
+    background-color: #ffebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  #bloglist {
+    white-space: nowrap;
+    width: 750px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #bloglist li {
+    text-align: center;
+    height: auto;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  #generalblogcontent {
+    margin-top: 0px;
+    width: 700px;
+    height: auto;
+    top: 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  #explore {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 90%;
+  }
+
+  /* Company */
+  #company {
+    height: 980px;
+  }
+  #handshake {
+    width: 750px;
+    height: 550px;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+  }
+  #companyDetails {
+    height: 460px;
+    width: 700px;
+  }
+
+  /* Beyond Dentistry   */
+
+  #bach {
+    width: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  #eachBach {
+    background-color: white;
+    height: 180px;
+    width: 180px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* FAQ */
+  #faq {
+    height: auto;
+    gap: 5px;
+  }
+
+  #questions {
+    width: 90%;
+    padding: 50px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #question {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #questions hr {
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  #smallsize {
+    display: block;
+  }
+  /* Footer */
+
+  #links {
+    padding-top: 10px;
+    padding-left: 50px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #box li {
+    list-style: none;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  #socialMedia {
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+  }
+  #box h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .socialMedia {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  #footerLogo {
+    font-size: 60px;
+    opacity: 25%;
+    line-height: 5rem;
+  }
+  #footerLogo h4 {
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  #footerline {
+    opacity: 50%;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+  }
+}
